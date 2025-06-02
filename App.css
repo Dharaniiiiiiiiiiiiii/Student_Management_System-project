@@ -1,0 +1,336 @@
+/* Global reset and base styles */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e, #4e3a85);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* App Container */
+.app-container {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #e0d7f5;
+  background: transparent; /* Inherit from body */
+}
+
+
+/* Card base */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+}
+
+/* Headers */
+h2 {
+  margin-bottom: 20px;
+  color: #1e293b;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Inputs and selects */
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  background-color: #5e4b8b;
+  color: #f0e6ff;
+  transition: background-color 0.3s ease;
+}
+
+input::placeholder {
+  color: #c6b9e7;
+}
+
+input:focus, select:focus {
+  outline: none;
+  background-color: #7d3c98;
+  box-shadow: 0 0 8px #bb86fc;
+  color: #fff;
+}
+
+/* Buttons base */
+button, .btn {
+  padding: 12px 28px;
+  border-radius: 16px;
+  border: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(155, 89, 182, 0.7);
+  color: #f0e6ff;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-right: 10px;
+  background-color: #9b59b6;
+}
+
+button:hover, .btn:hover {
+  background-color: #7d3c98;
+  box-shadow: 0 0 15px #7d3c98;
+  transform: translateY(-2px);
+}
+
+/* Cancel button variation */
+.cancel-btn {
+  background-color: #1a1a2e;
+  border: 2px solid #9b59b6;
+  color: #9b59b6;
+  box-shadow: none;
+  margin-right: 0;
+}
+
+.cancel-btn:hover {
+  background-color: #9b59b6;
+  color: #1a1a2e;
+  box-shadow: 0 0 15px #9b59b6;
+}
+
+/* Dashboard container */
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #2c2a4a;
+  border-radius: 18px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 40px rgba(155, 89, 182, 0.6);
+  margin-bottom: 40px;
+  box-sizing: border-box;
+}
+
+/* Dashboard Header */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  color: #bb86fc;
+  padding: 0;
+}
+
+.dashboard-header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.logout-btn {
+  background-color: #9b59b6;
+  padding: 10px 25px;
+  border-radius: 14px;
+  border: none;
+  color: #f0e6ff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 0 12px #9b59b6;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #7d3c98;
+}
+
+/* Student Form */
+.student-form {
+  background-color: #3b3577;
+  border-radius: 18px;
+  padding: 25px 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.5);
+  font-family: inherit;
+  color: #d7c8f7;
+}
+
+.student-form h2 {
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #d7c8f7;
+}
+
+/* Form row: label + input */
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.form-row label {
+  flex: 0 0 120px;
+  font-weight: 600;
+  color: #bb86fc;
+  font-size: 1.1rem;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+/* Buttons container in form */
+.form-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 18px;
+}
+
+/* Student List Card */
+.student-list-card {
+  background-color: #1a1a2e;
+  padding: 30px 25px;
+  margin: 25px 0;
+  border-radius: 14px;
+  box-shadow: 0 4px 30px rgba(99, 33, 155, 0.5);
+  color: #e0d7f5;
+}
+
+/* Student List title */
+.student-list-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #9b59b6;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Student Table */
+.student-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 14px;
+  font-size: 1rem;
+  color: #dcd6f7;
+}
+
+/* Table header */
+.student-table thead tr {
+  background-color: #5e4b8b;
+  color: #f0e6ff;
+  text-align: left;
+  border-radius: 14px;
+}
+
+.student-table th,
+.student-table td {
+  padding: 14px 18px;
+}
+
+/* Table rows */
+.student-row {
+  background-color: #2c2a4a;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.student-row:hover {
+  background-color: #4e3a85;
+  color: #ffffff;
+}
+
+/* Actions cell */
+.actions-cell {
+  display: flex;
+  gap: 12px;
+}
+
+/* Buttons inside table */
+.edit-btn {
+  background-color: #9b59b6;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #f0e6ff;
+  box-shadow: 0 0 8px rgba(155, 89, 182, 0.6);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.edit-btn:hover {
+  background-color: #7d3c98;
+  box-shadow: 0 0 12px #7d3c98;
+}
+
+.delete-btn {
+  background-color: #1a1a2e;
+  border: 2px solid #9b59b6;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #9b59b6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.delete-btn:hover {
+  background-color: #9b59b6;
+  color: #1a1a2e;
+  box-shadow: 0 0 15px #9b59b6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 20px 15px;
+  }
+
+  .dashboard {
+    padding: 20px 25px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    margin-bottom: 8px;
+  }
+
+  .actions-cell {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  td {
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+  }
+}
